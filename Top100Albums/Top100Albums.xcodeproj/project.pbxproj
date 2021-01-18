@@ -117,19 +117,16 @@
 		A9FE3E8725B61870005131CF /* Top100Albums */ = {
 			isa = PBXGroup;
 			children = (
+				A9FE3F2225B62B09005131CF /* Domain */,
 				A9FE3F0025B62A74005131CF /* DataLayer */,
-				A9FE3ECB25B61CFF005131CF /* Models */,
 				A9FE3E8825B61870005131CF /* AppDelegate.swift */,
 				A9FE3E8A25B61870005131CF /* SceneDelegate.swift */,
 				A9FE3E8C25B61870005131CF /* ViewController.swift */,
-				A9FE3EC425B61C97005131CF /* NetworkAPIClient.swift */,
 				A9FE3E9125B61872005131CF /* Assets.xcassets */,
 				A9FE3E9325B61872005131CF /* LaunchScreen.storyboard */,
 				A9FE3E9625B61872005131CF /* Info.plist */,
 				A9FE3ECC25B61D3B005131CF /* Development.xcconfig */,
 				A9FE3ECD25B61D4B005131CF /* Release.xcconfig */,
-				A9FE3EEC25B61F00005131CF /* AlbumRepository.swift */,
-				A9FE3EFB25B629BE005131CF /* RESTAlbumRepository.swift */,
 			);
 			path = Top100Albums;
 			sourceTree = "<group>";
@@ -165,8 +162,10 @@
 		A9FE3F0025B62A74005131CF /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
-				A9FE3F0E25B62AB8005131CF /* Mappers */,
+				A9FE3EC425B61C97005131CF /* NetworkAPIClient.swift */,
 				A9FE3EC525B61C97005131CF /* Mapper.swift */,
+				A9FE3F2625B62B13005131CF /* RESTRepositories */,
+				A9FE3F0E25B62AB8005131CF /* Mappers */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -178,6 +177,31 @@
 				A9FE3EF625B61F93005131CF /* AlbumMapper.swift */,
 			);
 			path = Mappers;
+			sourceTree = "<group>";
+		};
+		A9FE3F2225B62B09005131CF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A9FE3F2725B62B21005131CF /* Repositories */,
+				A9FE3ECB25B61CFF005131CF /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A9FE3F2625B62B13005131CF /* RESTRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				A9FE3EFB25B629BE005131CF /* RESTAlbumRepository.swift */,
+			);
+			path = RESTRepositories;
+			sourceTree = "<group>";
+		};
+		A9FE3F2725B62B21005131CF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A9FE3EEC25B61F00005131CF /* AlbumRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
