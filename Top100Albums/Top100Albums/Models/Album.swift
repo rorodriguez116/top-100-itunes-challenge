@@ -10,7 +10,7 @@ import Foundation
 struct Album: Codable {
     let artistName: String
     let id: String
-    let releaseDate: Date //"2021-01-08",
+    let releaseDate: Date
     let name: String
     let kind: EntityKind
     let copyright: String

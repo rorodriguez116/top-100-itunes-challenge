@@ -7,50 +7,11 @@
 
 import Foundation
 
-enum EntityKind: String, Codable {
-    case album
-    case song
-}
-
-enum AdvisoryRating: String, Codable {
-    case explicit = "Explicit"
-    case none = ""
-}
-
-struct Genre: Codable {
-    let id: String
-    let name: String
-    let url: URL
-}
-
-enum MappingError: Error {
-    case jsonDataDoesNotContainProperModel
-}
-
-struct GenreMapper: Mapper {    
-    struct Data: Codable {
-        let genreId: String
-        let name: String
-        let url: URL
-    }
-    
-    var dictionary: [String : Any]
-    
-    init(dictionary: [String: Any]) {
-        self.dictionary = dictionary
-    }
-    
-    func execute() throws -> Genre {
-        guard let data = Data(dictionary: self.dictionary) else { throw MappingError.jsonDataDoesNotContainProperModel}
-        return Genre(id: data.genreId, name: data.name, url: data.url)
-    }
-}
-
 struct AlbumMapper: Mapper {
     struct Data: Codable {
         let artistName: String
         let id: String
-        let releaseDate: String //"2021-01-08",
+        let releaseDate: String
         let name: String
         let kind: EntityKind
         let copyright: String

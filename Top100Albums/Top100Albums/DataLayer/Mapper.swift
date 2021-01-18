@@ -18,3 +18,7 @@ protocol Mapper {
     init(dictionary: [String: Any])
 
 }
+
+enum MappingError: Error {
+    case jsonDataDoesNotContainProperModel
+}
