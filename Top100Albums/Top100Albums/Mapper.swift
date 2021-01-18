@@ -11,7 +11,7 @@ import Foundation
 protocol Mapper {
     associatedtype T: Codable
     
-    func execute() -> T
+    func execute() throws -> T
     
     var dictionary: [String: Any] { get set }
     

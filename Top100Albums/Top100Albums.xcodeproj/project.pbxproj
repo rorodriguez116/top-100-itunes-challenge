@@ -17,6 +17,8 @@
 		A9FE3EC625B61C97005131CF /* NetworkAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3EC425B61C97005131CF /* NetworkAPIClient.swift */; };
 		A9FE3EC725B61C97005131CF /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3EC525B61C97005131CF /* Mapper.swift */; };
 		A9FE3EED25B61F00005131CF /* AlbumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3EEC25B61F00005131CF /* AlbumRepository.swift */; };
+		A9FE3EF225B61F46005131CF /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3EF125B61F46005131CF /* Album.swift */; };
+		A9FE3EF725B61F93005131CF /* AlbumMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3EF625B61F93005131CF /* AlbumMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		A9FE3ECC25B61D3B005131CF /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		A9FE3ECD25B61D4B005131CF /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		A9FE3EEC25B61F00005131CF /* AlbumRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRepository.swift; sourceTree = "<group>"; };
+		A9FE3EF125B61F46005131CF /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		A9FE3EF625B61F93005131CF /* AlbumMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 				A9FE3ECC25B61D3B005131CF /* Development.xcconfig */,
 				A9FE3ECD25B61D4B005131CF /* Release.xcconfig */,
 				A9FE3EEC25B61F00005131CF /* AlbumRepository.swift */,
+				A9FE3EF625B61F93005131CF /* AlbumMapper.swift */,
 			);
 			path = Top100Albums;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 		A9FE3ECB25B61CFF005131CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A9FE3EF125B61F46005131CF /* Album.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -277,9 +283,11 @@
 			files = (
 				A9FE3EC625B61C97005131CF /* NetworkAPIClient.swift in Sources */,
 				A9FE3E8D25B61870005131CF /* ViewController.swift in Sources */,
+				A9FE3EF725B61F93005131CF /* AlbumMapper.swift in Sources */,
 				A9FE3E8925B61870005131CF /* AppDelegate.swift in Sources */,
 				A9FE3EED25B61F00005131CF /* AlbumRepository.swift in Sources */,
 				A9FE3E8B25B61870005131CF /* SceneDelegate.swift in Sources */,
+				A9FE3EF225B61F46005131CF /* Album.swift in Sources */,
 				A9FE3EC725B61C97005131CF /* Mapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
