@@ -23,7 +23,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             self.window = UIWindow(windowScene: windowScene)
             
-            let rootViewController = ViewController()
+            let rootViewController = ViewController<AlbumFeedVM<GetTop100AlbumsInteractor>>()
+            let respository = RESTAlbumRepository()
+            let interactor = GetTop100AlbumsInteractor(repository: respository)
+            let vm = AlbumFeedVM(interactor: interactor)
+            rootViewController.viewModel = vm
 
             self.window?.rootViewController = rootViewController
             
