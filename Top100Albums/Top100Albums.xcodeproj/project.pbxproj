@@ -14,6 +14,8 @@
 		A9FE3E9525B61872005131CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FE3E9325B61872005131CF /* LaunchScreen.storyboard */; };
 		A9FE3EA025B61872005131CF /* Top100AlbumsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3E9F25B61872005131CF /* Top100AlbumsTests.swift */; };
 		A9FE3EAB25B61872005131CF /* Top100AlbumsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3EAA25B61872005131CF /* Top100AlbumsUITests.swift */; };
+		A9FE3EC625B61C97005131CF /* NetworkAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3EC425B61C97005131CF /* NetworkAPIClient.swift */; };
+		A9FE3EC725B61C97005131CF /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3EC525B61C97005131CF /* Mapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,10 @@
 		A9FE3EA625B61872005131CF /* Top100AlbumsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Top100AlbumsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FE3EAA25B61872005131CF /* Top100AlbumsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top100AlbumsUITests.swift; sourceTree = "<group>"; };
 		A9FE3EAC25B61872005131CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9FE3EC425B61C97005131CF /* NetworkAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAPIClient.swift; sourceTree = "<group>"; };
+		A9FE3EC525B61C97005131CF /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		A9FE3ECC25B61D3B005131CF /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		A9FE3ECD25B61D4B005131CF /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,17 @@
 		A9FE3E8725B61870005131CF /* Top100Albums */ = {
 			isa = PBXGroup;
 			children = (
+				A9FE3ECB25B61CFF005131CF /* Models */,
 				A9FE3E8825B61870005131CF /* AppDelegate.swift */,
 				A9FE3E8A25B61870005131CF /* SceneDelegate.swift */,
 				A9FE3E8C25B61870005131CF /* ViewController.swift */,
+				A9FE3EC525B61C97005131CF /* Mapper.swift */,
+				A9FE3EC425B61C97005131CF /* NetworkAPIClient.swift */,
 				A9FE3E9125B61872005131CF /* Assets.xcassets */,
 				A9FE3E9325B61872005131CF /* LaunchScreen.storyboard */,
 				A9FE3E9625B61872005131CF /* Info.plist */,
+				A9FE3ECC25B61D3B005131CF /* Development.xcconfig */,
+				A9FE3ECD25B61D4B005131CF /* Release.xcconfig */,
 			);
 			path = Top100Albums;
 			sourceTree = "<group>";
@@ -123,6 +134,13 @@
 				A9FE3EAC25B61872005131CF /* Info.plist */,
 			);
 			path = Top100AlbumsUITests;
+			sourceTree = "<group>";
+		};
+		A9FE3ECB25B61CFF005131CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9FE3EC625B61C97005131CF /* NetworkAPIClient.swift in Sources */,
 				A9FE3E8D25B61870005131CF /* ViewController.swift in Sources */,
 				A9FE3E8925B61870005131CF /* AppDelegate.swift in Sources */,
 				A9FE3E8B25B61870005131CF /* SceneDelegate.swift in Sources */,
+				A9FE3EC725B61C97005131CF /* Mapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +325,7 @@
 /* Begin XCBuildConfiguration section */
 		A9FE3EAD25B61872005131CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9FE3ECC25B61D3B005131CF /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -366,6 +387,7 @@
 		};
 		A9FE3EAE25B61872005131CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9FE3ECD25B61D4B005131CF /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -421,6 +443,7 @@
 		};
 		A9FE3EB025B61872005131CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9FE3ECC25B61D3B005131CF /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -440,6 +463,7 @@
 		};
 		A9FE3EB125B61872005131CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9FE3ECD25B61D4B005131CF /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,6 +483,7 @@
 		};
 		A9FE3EB325B61872005131CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9FE3ECC25B61D3B005131CF /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -481,6 +506,7 @@
 		};
 		A9FE3EB425B61872005131CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9FE3ECD25B61D4B005131CF /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -523,6 +549,7 @@
 		};
 		A9FE3EB725B61872005131CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9FE3ECD25B61D4B005131CF /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
