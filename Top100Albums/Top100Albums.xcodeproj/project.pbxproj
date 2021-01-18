@@ -23,6 +23,8 @@
 		A9FE3F0225B62A85005131CF /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F0125B62A85005131CF /* Enums.swift */; };
 		A9FE3F0A25B62AA7005131CF /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F0925B62AA7005131CF /* Genre.swift */; };
 		A9FE3F1025B62ABE005131CF /* GenreMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F0F25B62ABE005131CF /* GenreMapper.swift */; };
+		A9FE3F2F25B62DE4005131CF /* GetTop100AlbumsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F2E25B62DE4005131CF /* GetTop100AlbumsUseCase.swift */; };
+		A9FE3F3525B62E33005131CF /* GetTop100AlbumsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F3425B62E33005131CF /* GetTop100AlbumsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		A9FE3F0125B62A85005131CF /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		A9FE3F0925B62AA7005131CF /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		A9FE3F0F25B62ABE005131CF /* GenreMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreMapper.swift; sourceTree = "<group>"; };
+		A9FE3F2E25B62DE4005131CF /* GetTop100AlbumsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTop100AlbumsUseCase.swift; sourceTree = "<group>"; };
+		A9FE3F3425B62E33005131CF /* GetTop100AlbumsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTop100AlbumsInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 				A9FE3F0025B62A74005131CF /* DataLayer */,
 				A9FE3E8825B61870005131CF /* AppDelegate.swift */,
 				A9FE3E8A25B61870005131CF /* SceneDelegate.swift */,
+				A9FE3F3425B62E33005131CF /* GetTop100AlbumsInteractor.swift */,
 				A9FE3E8C25B61870005131CF /* ViewController.swift */,
 				A9FE3E9125B61872005131CF /* Assets.xcassets */,
 				A9FE3E9325B61872005131CF /* LaunchScreen.storyboard */,
@@ -182,6 +187,7 @@
 		A9FE3F2225B62B09005131CF /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				A9FE3F3325B62DEA005131CF /* UseCases */,
 				A9FE3F2725B62B21005131CF /* Repositories */,
 				A9FE3ECB25B61CFF005131CF /* Models */,
 			);
@@ -202,6 +208,14 @@
 				A9FE3EEC25B61F00005131CF /* AlbumRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A9FE3F3325B62DEA005131CF /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				A9FE3F2E25B62DE4005131CF /* GetTop100AlbumsUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +350,7 @@
 				A9FE3EC625B61C97005131CF /* NetworkAPIClient.swift in Sources */,
 				A9FE3E8D25B61870005131CF /* ViewController.swift in Sources */,
 				A9FE3F1025B62ABE005131CF /* GenreMapper.swift in Sources */,
+				A9FE3F2F25B62DE4005131CF /* GetTop100AlbumsUseCase.swift in Sources */,
 				A9FE3F0225B62A85005131CF /* Enums.swift in Sources */,
 				A9FE3F0A25B62AA7005131CF /* Genre.swift in Sources */,
 				A9FE3EF725B61F93005131CF /* AlbumMapper.swift in Sources */,
@@ -345,6 +360,7 @@
 				A9FE3EF225B61F46005131CF /* Album.swift in Sources */,
 				A9FE3EC725B61C97005131CF /* Mapper.swift in Sources */,
 				A9FE3EFC25B629BE005131CF /* RESTAlbumRepository.swift in Sources */,
+				A9FE3F3525B62E33005131CF /* GetTop100AlbumsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
