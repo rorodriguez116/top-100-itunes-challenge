@@ -6,9 +6,16 @@
 //
 
 import UIKit
+import Combine
 
 class AlbumTableViewCell: UITableViewCell {
         
+    private let retriever = ImageRetriever()
+    
+    private var cancellable: AnyCancellable?
+    
+    var onReuse: () -> Void = {}
+    
     private let albumNameLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16, weight: .regular)
@@ -29,7 +36,7 @@ class AlbumTableViewCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
-        imageView.backgroundColor = .red
+        imageView.image = UIImage(named: "placeholder")
         return imageView
     }()
     
@@ -69,9 +76,16 @@ class AlbumTableViewCell: UITableViewCell {
 
     }
     
+    override func prepareForReuse() {
+        albumArtWorkImageView.image = nil
+//        cancellable?.cancel()
+    }
+    
     func setupData(with album: Album) {
         self.albumNameLabel.text = album.name
         self.artistNameLabel.text = album.artistName
+        
+        self.albumArtWorkImageView.loadImage(with: album.artworkUrl100)
     }
 
 }

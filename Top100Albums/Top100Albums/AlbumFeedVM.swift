@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import Combine
 
+
 final class AlbumFeedVM<T: GetTop100AlbumsUseCase>: NSObject, AlbumFeedViewModel {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -21,7 +22,8 @@ final class AlbumFeedVM<T: GetTop100AlbumsUseCase>: NSObject, AlbumFeedViewModel
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath) as? AlbumTableViewCell {
-            cell.setupData(with: albums[indexPath.row])
+            let album = albums[indexPath.row]
+            cell.setupData(with: album)            
             return cell
         } else {
             return UITableViewCell()

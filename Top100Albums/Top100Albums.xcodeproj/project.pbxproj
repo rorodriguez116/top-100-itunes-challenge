@@ -28,6 +28,9 @@
 		A9FE3F4025B63540005131CF /* AlbumFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F3F25B63540005131CF /* AlbumFeedViewModel.swift */; };
 		A9FE3F4525B6354D005131CF /* AlbumFeedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F4425B6354D005131CF /* AlbumFeedVM.swift */; };
 		A9FE3F4A25B6359D005131CF /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F4925B6359D005131CF /* AlbumTableViewCell.swift */; };
+		A9FE3F4F25B6431F005131CF /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F4E25B6431F005131CF /* UIImageView+Extensions.swift */; };
+		A9FE3F5525B648C9005131CF /* ImageRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F5425B648C9005131CF /* ImageRetriever.swift */; };
+		A9FE3F5A25B648EB005131CF /* UIImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F5925B648EB005131CF /* UIImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		A9FE3F3F25B63540005131CF /* AlbumFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumFeedViewModel.swift; sourceTree = "<group>"; };
 		A9FE3F4425B6354D005131CF /* AlbumFeedVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumFeedVM.swift; sourceTree = "<group>"; };
 		A9FE3F4925B6359D005131CF /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		A9FE3F4E25B6431F005131CF /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		A9FE3F5425B648C9005131CF /* ImageRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRetriever.swift; sourceTree = "<group>"; };
+		A9FE3F5925B648EB005131CF /* UIImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,9 @@
 				A9FE3ECC25B61D3B005131CF /* Development.xcconfig */,
 				A9FE3ECD25B61D4B005131CF /* Release.xcconfig */,
 				A9FE3F4925B6359D005131CF /* AlbumTableViewCell.swift */,
+				A9FE3F4E25B6431F005131CF /* UIImageView+Extensions.swift */,
+				A9FE3F5425B648C9005131CF /* ImageRetriever.swift */,
+				A9FE3F5925B648EB005131CF /* UIImageLoader.swift */,
 			);
 			path = Top100Albums;
 			sourceTree = "<group>";
@@ -358,6 +367,7 @@
 			files = (
 				A9FE3EC625B61C97005131CF /* NetworkAPIClient.swift in Sources */,
 				A9FE3E8D25B61870005131CF /* ViewController.swift in Sources */,
+				A9FE3F5A25B648EB005131CF /* UIImageLoader.swift in Sources */,
 				A9FE3F1025B62ABE005131CF /* GenreMapper.swift in Sources */,
 				A9FE3F2F25B62DE4005131CF /* GetTop100AlbumsUseCase.swift in Sources */,
 				A9FE3F4A25B6359D005131CF /* AlbumTableViewCell.swift in Sources */,
@@ -365,9 +375,11 @@
 				A9FE3F4025B63540005131CF /* AlbumFeedViewModel.swift in Sources */,
 				A9FE3F0225B62A85005131CF /* Enums.swift in Sources */,
 				A9FE3F0A25B62AA7005131CF /* Genre.swift in Sources */,
+				A9FE3F5525B648C9005131CF /* ImageRetriever.swift in Sources */,
 				A9FE3EF725B61F93005131CF /* AlbumMapper.swift in Sources */,
 				A9FE3E8925B61870005131CF /* AppDelegate.swift in Sources */,
 				A9FE3EED25B61F00005131CF /* AlbumRepository.swift in Sources */,
+				A9FE3F4F25B6431F005131CF /* UIImageView+Extensions.swift in Sources */,
 				A9FE3E8B25B61870005131CF /* SceneDelegate.swift in Sources */,
 				A9FE3EF225B61F46005131CF /* Album.swift in Sources */,
 				A9FE3EC725B61C97005131CF /* Mapper.swift in Sources */,
