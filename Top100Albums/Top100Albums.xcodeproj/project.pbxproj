@@ -25,6 +25,9 @@
 		A9FE3F1025B62ABE005131CF /* GenreMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F0F25B62ABE005131CF /* GenreMapper.swift */; };
 		A9FE3F2F25B62DE4005131CF /* GetTop100AlbumsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F2E25B62DE4005131CF /* GetTop100AlbumsUseCase.swift */; };
 		A9FE3F3525B62E33005131CF /* GetTop100AlbumsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F3425B62E33005131CF /* GetTop100AlbumsInteractor.swift */; };
+		A9FE3F4025B63540005131CF /* AlbumFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F3F25B63540005131CF /* AlbumFeedViewModel.swift */; };
+		A9FE3F4525B6354D005131CF /* AlbumFeedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F4425B6354D005131CF /* AlbumFeedVM.swift */; };
+		A9FE3F4A25B6359D005131CF /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3F4925B6359D005131CF /* AlbumTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		A9FE3F0F25B62ABE005131CF /* GenreMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreMapper.swift; sourceTree = "<group>"; };
 		A9FE3F2E25B62DE4005131CF /* GetTop100AlbumsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTop100AlbumsUseCase.swift; sourceTree = "<group>"; };
 		A9FE3F3425B62E33005131CF /* GetTop100AlbumsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTop100AlbumsInteractor.swift; sourceTree = "<group>"; };
+		A9FE3F3F25B63540005131CF /* AlbumFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumFeedViewModel.swift; sourceTree = "<group>"; };
+		A9FE3F4425B6354D005131CF /* AlbumFeedVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumFeedVM.swift; sourceTree = "<group>"; };
+		A9FE3F4925B6359D005131CF /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,11 +133,14 @@
 				A9FE3E8A25B61870005131CF /* SceneDelegate.swift */,
 				A9FE3F3425B62E33005131CF /* GetTop100AlbumsInteractor.swift */,
 				A9FE3E8C25B61870005131CF /* ViewController.swift */,
+				A9FE3F4425B6354D005131CF /* AlbumFeedVM.swift */,
+				A9FE3F3F25B63540005131CF /* AlbumFeedViewModel.swift */,
 				A9FE3E9125B61872005131CF /* Assets.xcassets */,
 				A9FE3E9325B61872005131CF /* LaunchScreen.storyboard */,
 				A9FE3E9625B61872005131CF /* Info.plist */,
 				A9FE3ECC25B61D3B005131CF /* Development.xcconfig */,
 				A9FE3ECD25B61D4B005131CF /* Release.xcconfig */,
+				A9FE3F4925B6359D005131CF /* AlbumTableViewCell.swift */,
 			);
 			path = Top100Albums;
 			sourceTree = "<group>";
@@ -351,6 +360,9 @@
 				A9FE3E8D25B61870005131CF /* ViewController.swift in Sources */,
 				A9FE3F1025B62ABE005131CF /* GenreMapper.swift in Sources */,
 				A9FE3F2F25B62DE4005131CF /* GetTop100AlbumsUseCase.swift in Sources */,
+				A9FE3F4A25B6359D005131CF /* AlbumTableViewCell.swift in Sources */,
+				A9FE3F4525B6354D005131CF /* AlbumFeedVM.swift in Sources */,
+				A9FE3F4025B63540005131CF /* AlbumFeedViewModel.swift in Sources */,
 				A9FE3F0225B62A85005131CF /* Enums.swift in Sources */,
 				A9FE3F0A25B62AA7005131CF /* Genre.swift in Sources */,
 				A9FE3EF725B61F93005131CF /* AlbumMapper.swift in Sources */,
