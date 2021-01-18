@@ -62,7 +62,7 @@ struct ApiRequest {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = configuration.webserviceUrl
-        urlComponents.path = path + resource + endPoint
+        urlComponents.path = path + version + resource + endPoint
         if !queryParams.isEmpty {
             urlComponents.setQueryItems(with: queryParams)
         }
