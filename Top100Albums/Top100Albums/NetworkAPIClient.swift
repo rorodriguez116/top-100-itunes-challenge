@@ -238,7 +238,12 @@ class NetworkAPIClient {
                     if  let responseDict = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                         var result: [[String: Any]]?
                                                 
-                      
+                        if let dataArray = responseDict["results"] as? [[String: Any]], dataArray.count > 0 {
+                            result = dataArray
+                        } else {
+                            throw ClientError.requestFailed(message: "Could not find results key on JSON dictionary object")
+                        }
+                        
                         print(responseDict)
                         
                         return result ?? [["":""]]

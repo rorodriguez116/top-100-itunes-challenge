@@ -16,6 +16,7 @@
 		A9FE3EAB25B61872005131CF /* Top100AlbumsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3EAA25B61872005131CF /* Top100AlbumsUITests.swift */; };
 		A9FE3EC625B61C97005131CF /* NetworkAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3EC425B61C97005131CF /* NetworkAPIClient.swift */; };
 		A9FE3EC725B61C97005131CF /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3EC525B61C97005131CF /* Mapper.swift */; };
+		A9FE3EED25B61F00005131CF /* AlbumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE3EEC25B61F00005131CF /* AlbumRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A9FE3EC525B61C97005131CF /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		A9FE3ECC25B61D3B005131CF /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		A9FE3ECD25B61D4B005131CF /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		A9FE3EEC25B61F00005131CF /* AlbumRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				A9FE3E9625B61872005131CF /* Info.plist */,
 				A9FE3ECC25B61D3B005131CF /* Development.xcconfig */,
 				A9FE3ECD25B61D4B005131CF /* Release.xcconfig */,
+				A9FE3EEC25B61F00005131CF /* AlbumRepository.swift */,
 			);
 			path = Top100Albums;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				A9FE3EC625B61C97005131CF /* NetworkAPIClient.swift in Sources */,
 				A9FE3E8D25B61870005131CF /* ViewController.swift in Sources */,
 				A9FE3E8925B61870005131CF /* AppDelegate.swift in Sources */,
+				A9FE3EED25B61F00005131CF /* AlbumRepository.swift in Sources */,
 				A9FE3E8B25B61870005131CF /* SceneDelegate.swift in Sources */,
 				A9FE3EC725B61C97005131CF /* Mapper.swift in Sources */,
 			);
@@ -375,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -431,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -529,6 +533,7 @@
 		};
 		A9FE3EB625B61872005131CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9FE3ECC25B61D3B005131CF /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
