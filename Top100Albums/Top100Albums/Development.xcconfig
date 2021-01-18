@@ -7,4 +7,4 @@
 
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
-SERVICE_URL=https://rss.itunes.apple.com/api/v1/us/apple-music/top-albums/all/100/explicit.json
+SERVICE_URL=rss.itunes.apple.com
