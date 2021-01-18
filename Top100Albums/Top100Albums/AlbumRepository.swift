@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import Combine
 
 protocol AlbumRepository {
-    func getTop100() -> [Album]
+    func getTop100() -> AnyPublisher<[Album], Error>
 }

@@ -14,6 +14,7 @@ enum EntityKind: String, Codable {
 
 enum AdvisoryRating: String, Codable {
     case explicit = "Explicit"
+    case none = ""
 }
 
 struct Genre: Codable {
@@ -47,14 +48,14 @@ struct GenreMapper: Mapper {
 
 struct AlbumMapper: Mapper {
     struct Data: Codable {
-        let artistNam: String
+        let artistName: String
         let id: String
-        let releaseDate: Date //"2021-01-08",
+        let releaseDate: String //"2021-01-08",
         let name: String
         let kind: EntityKind
         let copyright: String
         let artistId: String
-        let contentAdvisoryRating: AdvisoryRating
+        let contentAdvisoryRating: AdvisoryRating?
         let artistUrl: URL
         let artworkUrl100: URL
         let genres: [GenreMapper.Data]
@@ -69,6 +70,9 @@ struct AlbumMapper: Mapper {
     
     func execute() throws -> Album {
         guard let data = Data(dictionary: self.dictionary) else { throw MappingError.jsonDataDoesNotContainProperModel}
-        return Album(artistNam: data.artistNam, id: data.id, releaseDate: data.releaseDate, name: data.name, kind: data.kind, copyright: data.copyright, artistId: data.artistId, contentAdvisoryRating: data.contentAdvisoryRating, artistUrl: data.artistUrl, artworkUrl100: data.artworkUrl100, genres: data.genres, url: data.url)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let releaseDate = formatter.date(from: data.releaseDate)
+        return Album(artistName: data.artistName, id: data.id, releaseDate: releaseDate ?? Date(), name: data.name, kind: data.kind, copyright: data.copyright, artistId: data.artistId, contentAdvisoryRating: data.contentAdvisoryRating ?? .none, artistUrl: data.artistUrl, artworkUrl100: data.artworkUrl100, genres: data.genres, url: data.url)
     }
 }

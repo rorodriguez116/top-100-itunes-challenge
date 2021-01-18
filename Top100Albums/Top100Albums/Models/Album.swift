@@ -8,7 +8,7 @@
 import Foundation
 
 struct Album: Codable {
-    let artistNam: String
+    let artistName: String
     let id: String
     let releaseDate: Date //"2021-01-08",
     let name: String

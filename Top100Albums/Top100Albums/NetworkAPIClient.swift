@@ -227,7 +227,7 @@ class NetworkAPIClient {
         case couldNotUnwrapData
     }
     
-    func call(request: URLRequest) -> AnyPublisher<[[String: Any]], Error> {
+    func call(request: URLRequest) -> AnyPublisher<[String: Any], Error> {
         URLSession(configuration: .default).dataTaskPublisher(for: request)
             .mapError({ (error) -> CallError in
                 CallError.urlError(error)
@@ -236,17 +236,7 @@ class NetworkAPIClient {
                 guard let response = response as? HTTPURLResponse else { throw CallError.networkingError(.noResponse) }
                 if response.statusCode == 200 {
                     if  let responseDict = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                        var result: [[String: Any]]?
-                                                
-                        if let dataArray = responseDict["results"] as? [[String: Any]], dataArray.count > 0 {
-                            result = dataArray
-                        } else {
-                            throw ClientError.requestFailed(message: "Could not find results key on JSON dictionary object")
-                        }
-                        
-                        print(responseDict)
-                        
-                        return result ?? [["":""]]
+                        return responseDict
                     }
                     
                     throw CallError.decodingError(MappingError.couldNotUnwrapData)
