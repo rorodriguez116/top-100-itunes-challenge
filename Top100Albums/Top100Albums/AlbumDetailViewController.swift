@@ -58,11 +58,12 @@ class AlbumDetailViewController: UIViewController {
     }()
     
     private let itunesButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Open in iTunes Store", for: .normal)
-        button.backgroundColor = UIColor.blue
+        button.backgroundColor = UIColor.oceanBlue
         button.addTarget(self, action: #selector(openItunes), for: .touchUpInside)
+        button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 8
         button.layer.shadowColor = UIColor.black.cgColor
         button.layer.shadowOpacity = 0.08
@@ -98,6 +99,7 @@ class AlbumDetailViewController: UIViewController {
         albumArtWorkImageView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
         albumArtWorkImageView.heightAnchor.constraint(equalToConstant: 300).isActive = true
         albumArtWorkImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        albumArtWorkImageView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true 
         
         stackView2.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -32).isActive = true
         stackView2.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
@@ -134,9 +136,7 @@ class AlbumDetailViewController: UIViewController {
     
     @objc
     func openItunes() {
-//        if let url = URL(string: "itms-apps://apple.com/app/id839686104") {
         UIApplication.shared.open(self.album.url)
-//        }
     }
 
     /*
@@ -149,4 +149,10 @@ class AlbumDetailViewController: UIViewController {
     }
     */
 
+}
+
+extension UIColor {
+    static var oceanBlue: UIColor {
+        return UIColor(named: "oceanBlue") ?? .blue
+    }
 }
