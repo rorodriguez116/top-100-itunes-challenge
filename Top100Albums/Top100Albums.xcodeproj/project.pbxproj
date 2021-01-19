@@ -570,7 +570,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HS2HJ27PLP;
-				INFOPLIST_FILE = Top100Albums/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Top100Albums/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -592,7 +592,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HS2HJ27PLP;
-				INFOPLIST_FILE = Top100Albums/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Top100Albums/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
