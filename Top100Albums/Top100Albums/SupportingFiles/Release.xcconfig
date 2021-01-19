@@ -1,0 +1,10 @@
+//
+//  Release.xcconfig
+//  Top100Albums
+//
+//  Created by Rolando Rodriguez on 1/18/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+SERVICE_URL=rss.itunes.apple.com
