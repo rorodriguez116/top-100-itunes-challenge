@@ -141,18 +141,14 @@
 				A9FE3E8A25B61870005131CF /* SceneDelegate.swift */,
 				A9FE3F3425B62E33005131CF /* GetTop100AlbumsInteractor.swift */,
 				A9FE3E8C25B61870005131CF /* ViewController.swift */,
+				A9FE3F4925B6359D005131CF /* AlbumTableViewCell.swift */,
 				A9FE3F5E25B65250005131CF /* AlbumDetailViewController.swift */,
 				A9FE3F4425B6354D005131CF /* AlbumFeedVM.swift */,
 				A9FE3F3F25B63540005131CF /* AlbumFeedViewModel.swift */,
 				A9FE3E9125B61872005131CF /* Assets.xcassets */,
 				A9FE3E9325B61872005131CF /* LaunchScreen.storyboard */,
-				A9FE3E9625B61872005131CF /* Info.plist */,
-				A9FE3ECC25B61D3B005131CF /* Development.xcconfig */,
-				A9FE3ECD25B61D4B005131CF /* Release.xcconfig */,
-				A9FE3F4925B6359D005131CF /* AlbumTableViewCell.swift */,
+				A9FE3F6B25B65E23005131CF /* SupportingFiles */,
 				A9FE3F4E25B6431F005131CF /* UIImageView+Extensions.swift */,
-				A9FE3F5425B648C9005131CF /* ImageRetriever.swift */,
-				A9FE3F5925B648EB005131CF /* UIImageLoader.swift */,
 			);
 			path = Top100Albums;
 			sourceTree = "<group>";
@@ -188,6 +184,8 @@
 		A9FE3F0025B62A74005131CF /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				A9FE3F5925B648EB005131CF /* UIImageLoader.swift */,
+				A9FE3F5425B648C9005131CF /* ImageRetriever.swift */,
 				A9FE3EC425B61C97005131CF /* NetworkAPIClient.swift */,
 				A9FE3EC525B61C97005131CF /* Mapper.swift */,
 				A9FE3F2625B62B13005131CF /* RESTRepositories */,
@@ -237,6 +235,16 @@
 				A9FE3F2E25B62DE4005131CF /* GetTop100AlbumsUseCase.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		A9FE3F6B25B65E23005131CF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A9FE3E9625B61872005131CF /* Info.plist */,
+				A9FE3ECC25B61D3B005131CF /* Development.xcconfig */,
+				A9FE3ECD25B61D4B005131CF /* Release.xcconfig */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
