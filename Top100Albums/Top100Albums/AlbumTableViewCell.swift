@@ -27,7 +27,6 @@ class AlbumTableViewCell: UITableViewCell {
     private let artistNameLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 12, weight: .regular)
-//        label.textColor = UIColor.lightText
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -78,7 +77,6 @@ class AlbumTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         albumArtWorkImageView.image = nil
-//        cancellable?.cancel()
     }
     
     func setupData(with album: Album) {

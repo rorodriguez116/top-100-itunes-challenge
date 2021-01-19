@@ -31,10 +31,6 @@ final class AlbumFeedVM<T: GetTop100AlbumsUseCase>: NSObject, AlbumFeedViewModel
         
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
-    
     internal var interactor: T
     
     private var subscriptions = Set<AnyCancellable>()
@@ -45,6 +41,10 @@ final class AlbumFeedVM<T: GetTop100AlbumsUseCase>: NSObject, AlbumFeedViewModel
     
     init(interactor: T) {
         self.interactor = interactor
+    }
+    
+    func getAlbum(at index: Int) -> Album {
+        return albums[index]
     }
     
     func loadAlbums() {

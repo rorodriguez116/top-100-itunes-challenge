@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController<ViewModel: AlbumFeedViewModel>: UIViewController {
+class ViewController<ViewModel: AlbumFeedViewModel>: UIViewController, UITableViewDelegate {
     
     var viewModel: ViewModel! {
         didSet {
@@ -25,6 +25,7 @@ class ViewController<ViewModel: AlbumFeedViewModel>: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Top 100 Albums"
         self.view.backgroundColor = .white
         
         setupViews()
@@ -44,7 +45,7 @@ class ViewController<ViewModel: AlbumFeedViewModel>: UIViewController {
     private func setupViews() {
         view.addSubview(tableView)
         tableView.dataSource = viewModel
-        tableView.delegate = viewModel
+        tableView.delegate = self
         tableView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
         tableView.heightAnchor.constraint(equalTo: self.view.heightAnchor).isActive = true
     }
@@ -56,6 +57,16 @@ class ViewController<ViewModel: AlbumFeedViewModel>: UIViewController {
         
         viewModel.loadAlbums()
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = AlbumDetailViewController()
+        vc.album = viewModel.getAlbum(at: indexPath.row)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

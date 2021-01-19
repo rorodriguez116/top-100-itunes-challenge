@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let vm = AlbumFeedVM(interactor: interactor)
             rootViewController.viewModel = vm
 
-            self.window?.rootViewController = rootViewController
+            self.window?.rootViewController = UINavigationController(rootViewController: rootViewController)
             
             self.window?.makeKeyAndVisible()
         }

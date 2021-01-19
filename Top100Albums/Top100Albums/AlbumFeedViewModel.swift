@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol AlbumFeedViewModel: UITableViewDelegate, UITableViewDataSource {
+protocol AlbumFeedViewModel: UITableViewDataSource {
     associatedtype Interactor: GetTop100AlbumsUseCase
     
     var interactor: Interactor { get set }
@@ -16,4 +16,6 @@ protocol AlbumFeedViewModel: UITableViewDelegate, UITableViewDataSource {
     var binding: (() -> ())? { get set }
 
     func loadAlbums()
+    
+    func getAlbum(at index: Int) -> Album
 }
