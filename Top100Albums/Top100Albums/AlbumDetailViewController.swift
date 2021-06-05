@@ -9,7 +9,7 @@ import UIKit
 
 class AlbumDetailViewController: UIViewController {
 
-    var album: Album!
+    var album: Album?
     
     private let artistNameLabel: UILabel = {
         let label = UILabel()
@@ -113,6 +113,9 @@ class AlbumDetailViewController: UIViewController {
         itunesButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -32).isActive = true
         itunesButton.heightAnchor.constraint(equalToConstant: 45).isActive = true
         itunesButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        
+        
+        guard let album = self.album else { return }
       
         albumArtWorkImageView.loadImage(with: album.artworkUrl100)
         
@@ -136,7 +139,8 @@ class AlbumDetailViewController: UIViewController {
     
     @objc
     func openItunes() {
-        UIApplication.shared.open(self.album.url)
+        guard let url = album?.url else { return }
+        UIApplication.shared.open(url)
     }
 
     /*

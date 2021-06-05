@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController<ViewModel: AlbumFeedViewModel>: UIViewController, UITableViewDelegate {
     
-    var viewModel: ViewModel! {
+    var viewModel: ViewModel? {
         didSet {
             refreshData()
         }
@@ -37,7 +37,7 @@ class ViewController<ViewModel: AlbumFeedViewModel>: UIViewController, UITableVi
     }
     
     private func setupBinding() {
-        viewModel.binding = { [weak self] in
+        viewModel?.binding = { [weak self] in
             self?.tableView.reloadData()
         }
     }
@@ -65,7 +65,7 @@ class ViewController<ViewModel: AlbumFeedViewModel>: UIViewController, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = AlbumDetailViewController()
-        vc.album = viewModel.getAlbum(at: indexPath.row)
+        vc.album = viewModel?.getAlbum(at: indexPath.row)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

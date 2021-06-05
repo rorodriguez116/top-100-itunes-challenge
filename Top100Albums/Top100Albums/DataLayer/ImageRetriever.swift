@@ -12,6 +12,7 @@ import Combine
 final class ImageRetriever {
     enum RetrivingError: Error {
         case errorRetrievingRemoteImage
+        case errorRetrievingLocalImage
     }
     
     private var loadedImages = [URL: UIImage]()
@@ -26,12 +27,13 @@ final class ImageRetriever {
             .eraseToAnyPublisher()
         } else {
             return URLSession.shared.dataTaskPublisher(for: url)
-                        .map({ (data, response) -> UIImage in
+                        .tryMap({ (data, response) -> UIImage in
                             if let image = UIImage(data: data) {
                                 self.loadedImages[url] = image
                                 return image
                             } else {
-                                return UIImage(named: "placeholder")!
+                                guard let image = UIImage(named: "placeholder") else { throw RetrivingError.errorRetrievingLocalImage }
+                                return  image
                             }
                         })
                         .mapError({ (err) -> RetrivingError in
